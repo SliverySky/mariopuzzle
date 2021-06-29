@@ -1,0 +1,1 @@
+from pcg_gym.envs.mario_puzzle import MarioPuzzle

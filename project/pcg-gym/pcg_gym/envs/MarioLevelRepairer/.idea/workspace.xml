@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="636c95a7-4ee6-4071-84d4-062bb715b274" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNet/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNet/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNet/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNet/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/best.png" beforeDir="false" afterPath="$PROJECT_DIR$/GA/best.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/clear.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/clear.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/mean.png" beforeDir="false" afterPath="$PROJECT_DIR$/GA/mean.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/point.png" beforeDir="false" afterPath="$PROJECT_DIR$/GA/point.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration23.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration24.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration24.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration25.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration25.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration26.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration26.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration27.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration28.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration28.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration29.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration29.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration31.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration31.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration32.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration33.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration34.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration34.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration35.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration35.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration36.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration36.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration37.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration37.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration39.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration39.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration40.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration40.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration41.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration42.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration42.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration43.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration43.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration44.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration45.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration45.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration46.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration46.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration47.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration47.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration48.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration48.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration49.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration49.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration50.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration50.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/figure/iteration9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/figure/iteration9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/json/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/json/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/result(Remark).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/result(Remark).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/result.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/start(Remark).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/start(Remark).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/start.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/start.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration13.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration14.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration16.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration17.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration18.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration19.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration20.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration21.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration22.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration22.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration23.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration24.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration24.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration26.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration26.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration27.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration27.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration28.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration28.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration29.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration31.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration31.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration32.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration32.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration33.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration33.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration34.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration34.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration35.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration35.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration36.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration36.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration37.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration37.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration38.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration38.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration39.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration39.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration40.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration40.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration41.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration41.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration42.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration42.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration43.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration43.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration44.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration44.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration45.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration45.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration46.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration46.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration47.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration47.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration48.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration48.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration49.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration49.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration50.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration50.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/result/txt/iteration9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA/result/txt/iteration9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/GAN/dcgan.py" beforeDir="false" afterPath="$PROJECT_DIR$/LevelGenerator/GAN/dcgan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root.py" beforeDir="false" afterPath="$PROJECT_DIR$/root.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/level_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/level_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/visualization.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mog8aepz1gjCsqAR3rvojW2wVS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CNet/data" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\LevelGenerator" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet\data" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Assets\Tiles" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\CNet\data" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\GA" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\GA" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Experiment2" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.draw_graph">
+    <configuration name="clear" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MarioLevelRepairer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/clear.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="draw_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MarioLevelRepairer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/draw_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MarioLevelRepairer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/evaluate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="render" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MarioLevelRepairer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/render.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MarioLevelRepairer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.draw_graph" />
+        <item itemvalue="Python.evaluate" />
+        <item itemvalue="Python.render" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.clear" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="636c95a7-4ee6-4071-84d4-062bb715b274" name="Default Changelist" comment="" />
+      <created>1610165198362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610165198362</updated>
+      <workItem from="1610165199813" duration="21146000" />
+      <workItem from="1610194918375" duration="6796000" />
+      <workItem from="1610201745223" duration="2210000" />
+      <workItem from="1610257453909" duration="4160000" />
+      <workItem from="1610263143444" duration="10147000" />
+      <workItem from="1610279419213" duration="3269000" />
+    </task>
+    <task id="LOCAL-00001" summary="upload some files">
+      <created>1610278228804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610278228822</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upload some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload some files" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1610282630114">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610282630114" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1610282630113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610282630113" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1610282630113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610282630113" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1610282630113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610282630113" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$repair.coverage" NAME="repair Coverage Results" MODIFIED="1610275932047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$add_fake_data.coverage" NAME="add_fake_data Coverage Results" MODIFIED="1610176012265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$run.coverage" NAME="run Coverage Results" MODIFIED="1610282484275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$GA.coverage" NAME="GA Coverage Results" MODIFIED="1610260850955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$render.coverage" NAME="render Coverage Results" MODIFIED="1610282556515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate_level.coverage" NAME="generate_level Coverage Results" MODIFIED="1610201302876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/GAN" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$EA.coverage" NAME="EA Coverage Results" MODIFIED="1610183818847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$EA_v2.coverage" NAME="EA_v2 Coverage Results" MODIFIED="1610177369286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$identify.coverage" NAME="identify Coverage Results" MODIFIED="1610276491207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$level_process.coverage" NAME="level_process Coverage Results" MODIFIED="1610167604122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate.coverage" NAME="generate Coverage Results" MODIFIED="1610179232752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet/data" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1610182282184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$test.coverage" NAME="test Coverage Results" MODIFIED="1610169133612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate__1_.coverage" NAME="generate (1) Coverage Results" MODIFIED="1610200139089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/RandomDestroyed" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$evaluate.coverage" NAME="evaluate Coverage Results" MODIFIED="1610282601817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$model.coverage" NAME="model Coverage Results" MODIFIED="1610175332745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$clear.coverage" NAME="clear Coverage Results" MODIFIED="1610282446991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1610282630109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$real_time_renderer.coverage" NAME="real_time_renderer Coverage Results" MODIFIED="1610276414429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+  </component>
+</project>
