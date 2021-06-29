@@ -1,0 +1,14 @@
+exp13: 不用novelty
+exp14: 使用novelty
+exp15: 使用novelty + archive (5)
+exp16: 使用novelty + archive (all population)
+
+epx17 对饮 exp14  w=0.1
+epx18 对饮 exp15  w=0.1
+epx19 对饮 exp16  w=0.1
+
+exp 23 maxlen(20) k=5
+
+exp24 maxlen(30) k=10
+exp25 maxlen(30) k=10, 超出范围 0.60+-0.34 -2
+exp26 maxlen(30) k=10, 加上playable -10， 超出范围 0.60+-0.34 -2
