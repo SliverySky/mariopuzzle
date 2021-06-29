@@ -69,7 +69,8 @@ def saveLevelAsImage(level, path, line=0, mark={}):
                 (IMAGE_SIZE, IMAGE_SIZE), Image.ANTIALIAS)
             to_image.paste(from_image, ((x - 1) * IMAGE_SIZE, (y - 1) * IMAGE_SIZE))
     #ttf = ImageFont.load_default()
-    ttf = ImageFont.truetype("/home/cseadmin/sty/project2/font.OTF", 20)
+    print(os.path.dirname(os.path.abspath(__file__))+"/font.OTF")
+    ttf = ImageFont.truetype(os.path.dirname(os.path.abspath(__file__))+"/font.OTF", 20)
     draw = ImageDraw.Draw(to_image)
     if line != 0:
         for i in range(IMAGE_COLUMN//line):

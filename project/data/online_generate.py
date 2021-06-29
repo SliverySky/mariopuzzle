@@ -1,6 +1,7 @@
 import sys
-sys.path.append('/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/a2c_ppo_acktr')
-sys.path.append('/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/')
+from root import rootpath
+sys.path.append(rootpath+'/..'+'/pytorch-a2c-ppo-acktr-gail/a2c_ppo_acktr')
+sys.path.append(rootpath+'/..'+'/pytorch-a2c-ppo-acktr-gail/')
 import argparse
 import os
 # workaround to unpickle olf model files
@@ -35,8 +36,10 @@ args = parser.parse_args()
 info = {}
 info['exp'] = int(7)
 random_resample = True if int(args.random)==1 else False
-load_dir='/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/trained_models/'+'experiment'+args.exp+'/ppo/'
-save_dir='./levels/'+'exp'+args.exp+"_online"+("_random"if random_resample else "")+"/"
+load_dir=rootpath + '/pretrained_agent/'+'experiment'+args.exp+'/ppo/'
+save_dir=rootpath+'/levels/'+'exp'+args.exp+"_online"+("_random"if random_resample else "")+"/"
+if not os.path.isdir(save_dir):
+    os.mkdir(save_dir)
 env = make_vec_envs(
     args.env_name,
     1 + 1000,

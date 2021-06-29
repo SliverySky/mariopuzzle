@@ -32728,3 +32728,220 @@ Exception in thread "main" java.lang.NullPointerException
 	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
 	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
 	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+java.net.BindException: Address already in use (Bind failed)
+	at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:437)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:381)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:243)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:135)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:77)
+Process ForkServerProcess-1:
+Traceback (most recent call last):
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 47, in _worker
+    remote.send((env.observation_space, env.action_space))
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Process ForkServerProcess-1:
+Traceback (most recent call last):
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/site-packages/stable_baselines3/common/vec_env/subproc_vec_env.py", line 47, in _worker
+    remote.send((env.observation_space, env.action_space))
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/home/cseadmin/anaconda3/envs/torch/lib/python3.7/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)
+Exception in thread "main" java.lang.NullPointerException
+	at engine.core.MarioLevel.clone(MarioLevel.java:286)
+	at engine.core.MarioWorld.clone(MarioWorld.java:187)
+	at engine.core.MarioOnlineGame.gameLoop(MarioOnlineGame.java:175)
+	at engine.core.MarioOnlineGame.runGame(MarioOnlineGame.java:115)
+	at PlayOnlineLevel.main(PlayOnlineLevel.java:135)

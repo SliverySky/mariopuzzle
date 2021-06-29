@@ -20,6 +20,8 @@ from subprocess import *
 import subprocess
 import time
 import socket
+gpu_num = 4 # each environment contains a GAN and a repairer. They are distributed into multiple gpus.
+
 def clean(prog):
     try:
         prog.close()
@@ -34,7 +36,7 @@ class AStarAgent():
     def start(self):
         #self.agent = subprocess.Popen(["java", "-jar",rootpath + "/Mario-AI-Framework-master.jar", rootpath + "/" + str(self.id), str(port)], stdin=PIPE, stdout=PIPE)
         register(clean, self)
-        self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #声明socket类型，同时生成链接对象
+        self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # find a unused port 
         while True:
             self.port = int(random.random()*5000)+2000
@@ -47,14 +49,14 @@ class AStarAgent():
         os.system("java -jar "+rootpath + "/Mario-AI-Framework-master.jar " + rootpath + "/test_pool/" + str(self.id) + " " +str(self.port)+" "+self.visuals+" &")
         while True:
             try:
-                self.client.connect(('localhost',self.port)) #建立一个链接，连接到本地的6969端口
+                self.client.connect(('localhost',self.port))
                 break
             except:
                 pass
     def close(self):
-        msg = 'close'  #strip默认取出字符串的头尾空格
-        self.client.send(msg.encode('utf-8'))  #发送一条信息 python3 只接收btye流  
-        self.client.close() #关闭这个链接
+        msg = 'close' 
+        self.client.send(msg.encode('utf-8'))   
+        self.client.close() 
         self.test_id = 0
     def start_test(self, lv):
         return self.__test(lv, "start\n")
@@ -63,14 +65,10 @@ class AStarAgent():
     def retest(self, lv):
         return self.__test(lv, "retest\n")
     def __test(self, lv, msg):
-            # addr = client.accept()
-            # print '连接地址：', addr
         name = str(self.id)+"_"+str(self.test_id)
         saveLevelAsText(lv, rootpath+"/test_pool/"+name)
-        res = self.client.send(msg.encode('utf-8'))  #发送一条信息 python3 只接收btye流
-        #阻塞等待
-        data = self.client.recv(1024) #接收一个信息，并指定接收的大小 为1024字节
-        #print(data.decode())
+        res = self.client.send(msg.encode('utf-8'))  
+        data = self.client.recv(1024) 
         rate = float(data.decode())
         os.remove(rootpath+"/test_pool/"+name+".txt")
         self.test_id+=1
@@ -93,6 +91,7 @@ class MarioPuzzle(gym.Env):
         self.start_time = 0
         self.online = False
         self.mutation = False
+        self.skip = False
 
     def kl_fn(self, val):
         if (val<0.26):return -(val-0.26)**2
@@ -102,6 +101,7 @@ class MarioPuzzle(gym.Env):
     def setParameter(self, info, index=0):
         exp = info['exp']
         visuals = 'visuals' in info.keys()
+        self.skip = 'skip' in info.keys()
         # set reward function
         self.cnt = 0
         self.map_h = 14
@@ -128,9 +128,8 @@ class MarioPuzzle(gym.Env):
         self.agent.start()
         # other settings
         model_path = os.path.dirname(__file__) + "//models//" + str(self.win_h)+"_"+str(self.win_w)+".pth"
-        #self.generator = Generator(model_path, self.win_h, self.win_w, index//8)
-        self.generator = Generator(self.id, index//4)
-        self.repairer = Repairer(index//4)
+        self.generator = Generator(self.id, index//gpu_num)
+        self.repairer = Repairer(index//gpu_num)
         self.tot = (self.map_h // self.win_h) * (self.map_w // self.win_w)
     def sampleRandomVector(self, size):
         return np.random.rand(size)*2-1
@@ -225,10 +224,10 @@ class MarioPuzzle(gym.Env):
             info['MD_sum'] = sum(recorder['MD'])
             info['N_sum'] = sum(recorder['N'])
             info['ep_len'] = self.cnt
-            info['N_max'] =  max(self.N_que)
-            info['N_min'] = min(self.N_que)
-            info['MD_max'] = max(self.D_que)
-            info['MD_min'] = min(self.D_que)
+            #info['N_max'] =  max(self.N_que)
+            #info['N_min'] = min(self.N_que)
+            #info['MD_max'] = max(self.D_que)
+            #info['MD_min'] = min(self.D_que)
             self.recorder['lv'] = self.lv[:,0:now_x+self.win_w]
             self.recorder['unrepair_lv']=self.unrepair_lv[:,0:now_x+self.win_w]
             info['recorder']=recorder
@@ -277,13 +276,7 @@ class MarioPuzzle(gym.Env):
             info['unrepair_lv'] = self.unrepair_lv
             done=True
         return self.state, 0, done, info
-        
-    def mutate(self, action):
-        if self.mutation:
-            return self.sampleRandomVector(32)
-        epsilon = 0.01
-        new_action = action + epsilon * (np.random.rand((self.nz))*2-1)
-        return np.where(np.logical_and(self.action_space.low<=new_action, new_action<=self.action_space.high), new_action, action)
+
     def cal_novelty(self, piece):
         score=[]
         for x in self.pop:

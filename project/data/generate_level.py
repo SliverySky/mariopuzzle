@@ -1,6 +1,7 @@
 import sys
-sys.path.append('/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/a2c_ppo_acktr')
-sys.path.append('/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/')
+from root import rootpath
+sys.path.append(rootpath+'/..'+'/pytorch-a2c-ppo-acktr-gail/a2c_ppo_acktr')
+sys.path.append(rootpath+'/..'+'/pytorch-a2c-ppo-acktr-gail/')
 
 import argparse
 import os
@@ -25,7 +26,7 @@ parser.add_argument(
     help='environment to train on (default: PongNoFrameskip-v4)')
 parser.add_argument(
     '--exp',
-    default='1')
+    default='1_no')
 parser.add_argument(
     '--cuda',
     default='1')
@@ -33,11 +34,10 @@ args = parser.parse_args()
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda
 info = {}
-info['exp'] = 11#int(args.exp)
-info['skip'] = 1 # generate a level of one hundred segments 
+info['exp'] = 4#generate a level of one hundred segments 
 
-load_dir='/home/cseadmin/sty/project2/pytorch-a2c-ppo-acktr-gail/trained_models/'+'experiment'+args.exp+'/ppo/'
-save_dir='./levels/random/'#+'exp'+args.exp+"/"
+load_dir=rootpath + '/pretrained_agent/'+'experiment'+args.exp+'/ppo/'
+save_dir=rootpath+'/levels/'+'exp'+args.exp+"/"
 if not os.path.isdir(save_dir):
     os.mkdir(save_dir)
 env = make_vec_envs(
@@ -61,7 +61,7 @@ generate_num = 10
 cnt = 0
 recurrent_hidden_states = torch.zeros(1,
                                   actor_critic.recurrent_hidden_state_size).cuda()
-Random_agent=True
+Random_agent=False
 for generate_i in range(generate_num):
     env.envs[0].initial_state = initial_states[generate_i] # set the initial segment
     env.envs[0].his_len=1
@@ -94,6 +94,6 @@ for generate_i in range(generate_num):
         recorder = info['recorder']
         saveLevelAsText(info['recorder']["lv"], save_dir+str(generate_i)+"_"+str(k)+"_"+str(info['ep_len']))
         #saveLevelAsImage(info['recorder']["unrepair_lv"],save_dir+"norepair_"+str(generate_i)+"_"+str(info['ep_len']), win_w)
-        #saveLevelAsImage(info['recorder']["lv"],save_dir+str(generate_i)+"_"+str(k)+"_"+str(info['ep_len']), win_w)
+        saveLevelAsImage(info['recorder']["lv"],save_dir+str(generate_i)+"_"+str(k)+"_"+str(info['ep_len']), win_w)
         print('sum=',reward_sum)
         print("iter=",generate_i)

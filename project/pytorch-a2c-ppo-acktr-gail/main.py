@@ -55,7 +55,7 @@ def main():
     actor_critic = Policy(
         envs.observation_space.shape,
         envs.action_space,
-        base_kwargs={'recurrent': args.recurrent_policy, 'hidden_size':128})
+        base_kwargs={'recurrent': args.recurrent_policy})
     actor_critic.to(device)
     if args.algo == 'a2c':
         agent = algo.A2C_ACKTR(
