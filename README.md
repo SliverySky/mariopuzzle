@@ -14,7 +14,8 @@ Please use this bibtex if you use this repository in your work:
 }
 ````
 
-Update (June 29th, 2021)
+## Update (June 29th, 2021)
+
 TODOs added on June 29th, 2021
 * Add instructions about how to use it.
 * Make this repository more clean and readable in the near future.
