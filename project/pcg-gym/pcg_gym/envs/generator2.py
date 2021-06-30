@@ -5,7 +5,7 @@ import numpy
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3,4"
 class Generator():
-    def __init__(self, id, index=0, gpu=True):
+    def __init__(self, id, index=0, gpu=False):
         os.environ["CUDA_VISIBLE_DEVICES"]=str(index)
         w=14
         h=14
@@ -31,7 +31,9 @@ class Generator():
         if self.gpu:
             with torch.no_grad():
                 levels = self.generator(Variable(latent_vector).cuda())
-        else: levels = self.generator(Variable(latent_vector, volatile=True))
+        else: 
+            with torch.no_grad():
+                levels = self.generator(Variable(latent_vector))
         im = levels.data.cpu().numpy()
         im = im[:, :, :self.h, :self.w]  # Cut of rest to fit the 14x28 tile dimensions
         im = numpy.argmax(im, axis=1)

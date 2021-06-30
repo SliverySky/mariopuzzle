@@ -46,29 +46,28 @@ env = make_vec_envs(
     1,
     None,
     None,
-    device='cuda',
+    device='cpu',
     allow_early_resets=False,info=info) 
 actor_critic, obs_rms = \
-            torch.load(os.path.join(load_dir, args.env_name + ".pt")) #map_location='cpu'
-actor_critic= actor_critic.cuda()
+            torch.load(os.path.join(load_dir, args.env_name + ".pt"), map_location='cpu') #map_location='cpu'
 vec_norm = get_vec_normalize(env)
 if vec_norm is not None:
     vec_norm.eval()
     vec_norm.obs_rms = obs_rms
 # intial the environment and agent
 
-generate_num = 10
+generate_num = 30
 cnt = 0
 recurrent_hidden_states = torch.zeros(1,
-                                  actor_critic.recurrent_hidden_state_size).cuda()
+                                  actor_critic.recurrent_hidden_state_size)
 Random_agent=False
 for generate_i in range(generate_num):
     env.envs[0].initial_state = initial_states[generate_i] # set the initial segment
     env.envs[0].his_len=1
-    for k in range(30):
+    for k in range(10):
         if os.path.exists(save_dir+str(generate_i)+"_"+str(k)+"_100"+".txt"):
             continue
-        masks = torch.zeros(1, 1).cuda() # mask the hidden states
+        masks = torch.zeros(1, 1) # mask the hidden states
         lvs = []
         obs = env.reset()
         done = [False]
@@ -85,7 +84,7 @@ for generate_i in range(generate_num):
             obs, reward, done, info = env.step(action)
             masks = torch.tensor(
                 [[0.0] if done_ else [1.0] for done_ in done],
-                dtype=torch.float32).cuda()
+                dtype=torch.float32)
             reward = reward.cpu().numpy()[0][0]
             cnt += 1
             reward_sum += reward

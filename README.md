@@ -48,7 +48,7 @@ Now the mariopuzzle contains:
 Use random agent to play mariopuzzle (generate levels):
 
 ```python
-cd /pcg-gym/pcg_gym/envs/
+cd project/pcg-gym/pcg_gym/envs/
 python visual_play.py
 ```
 
@@ -64,7 +64,7 @@ Since each environment contains a GAN, a repairer and a tetst agent, multiple GP
 ### Generate levels with pre-trained agent
 
 ```sh
-cd data
+cd project/data
 python generate_level.py --exp 7 # generate levels with pretrained agent 
 python online_generate.py --exp 7 # online generate playable levels
 ```

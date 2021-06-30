@@ -24,7 +24,6 @@ import os
 from pcg_gym.envs.MarioLevelRepairer.CNet.model import CNet
 from pcg_gym.envs.generator import Generator
 from atexit import register
-pro_name = "//home//cseadmin//sty//project2//pcg-gym//pcg_gym//envs//Generator//GAN.py"
 import subprocess
 def clean(prog):
     prog.terminate()
@@ -45,10 +44,12 @@ def main():
     utils.cleanup_log_dir(eval_log_dir)
     
     #os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_id
-    
+    cuda_id = [int(x) for x in args.cuda_id.split(',')]
+    print(cuda_id)
     torch.set_num_threads(1)
-    device = torch.device("cuda:0" if args.cuda else "cpu")
-    info={'exp':int(args.experiment)}
+    device = torch.device("cuda:"+str(cuda_id[0]) if args.cuda else "cpu")
+    print(device)
+    info={'exp':int(args.experiment), 'cuda':args.cuda, "cuda_id":cuda_id}
     envs = make_vec_envs(args.env_name, args.seed, args.num_processes,
                          args.gamma, args.log_dir, device, False, info=info)
     

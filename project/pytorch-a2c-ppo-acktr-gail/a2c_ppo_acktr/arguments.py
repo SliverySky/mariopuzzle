@@ -152,7 +152,7 @@ def get_args():
     ### pcg_mario
     parser.add_argument(
         '--cuda-id',
-        default=0
+        default='0,1,2,3'
     )
     parser.add_argument(
         '--experiment',

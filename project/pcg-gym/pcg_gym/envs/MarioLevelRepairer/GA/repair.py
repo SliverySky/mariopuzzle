@@ -31,6 +31,7 @@ picture_name = ''
 xv = []
 score = []  # score[i][j] = {"fit": 0, "value": 0, "replace": 0, "wrong": 0} i means iteration, j means index of individual
 bestScore = []
+net_device = "cuda:0"
 
 
 def crossOver(ind1, ind2):
@@ -226,7 +227,11 @@ def get_protile(ind, i, j):
             for i1 in range(1, 9):
                 x[(i1-1) * type_num + 1 + condition[i1]] = 1
             with torch.no_grad():
-                pro = F.softmax(net(Variable(x).cuda()), dim=0)
+                if str(net_device) != 'cpu':
+                    new = net(Variable(x).cuda())
+                else:
+                    new = net(Variable(x))
+                pro = F.softmax(new, dim=0)
             pro_tile = []
             pro_num = []
             for i1 in range(type_num-1):
@@ -310,12 +315,14 @@ def get_mark_set(ind):
                 T1.append((i, j))
     return level, S1, T1
 
-def GA(_net, lv, result_path="", isfigure=True, isrepair=True):
+def GA(_net, lv, result_path="", isfigure=True, isrepair=True, device="cpu"):
     global origin
     global net
     global score
+    global net_device
     net = _net
     score = []
+    net_device = device
     for i in range(Iteration):
         one = []
         for j in range(Lamda):

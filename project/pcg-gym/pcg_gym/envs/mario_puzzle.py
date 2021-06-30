@@ -20,7 +20,6 @@ from subprocess import *
 import subprocess
 import time
 import socket
-gpu_num = 4 # each environment contains a GAN and a repairer. They are distributed into multiple gpus.
 
 def clean(prog):
     try:
@@ -102,6 +101,9 @@ class MarioPuzzle(gym.Env):
         exp = info['exp']
         visuals = 'visuals' in info.keys()
         self.skip = 'skip' in info.keys()
+        cuda = 'cuda' in info.keys() and info['cuda']
+        cuda_num = len(info['cuda_id']) if cuda else 1
+        cuda_id = info['cuda_id'][index%cuda_num] if cuda else 0
         # set reward function
         self.cnt = 0
         self.map_h = 14
@@ -128,8 +130,8 @@ class MarioPuzzle(gym.Env):
         self.agent.start()
         # other settings
         model_path = os.path.dirname(__file__) + "//models//" + str(self.win_h)+"_"+str(self.win_w)+".pth"
-        self.generator = Generator(self.id, index//gpu_num)
-        self.repairer = Repairer(index//gpu_num)
+        self.generator = Generator(self.id, cuda_id, cuda)
+        self.repairer = Repairer(cuda_id, cuda)
         self.tot = (self.map_h // self.win_h) * (self.map_w // self.win_w)
     def sampleRandomVector(self, size):
         return np.random.rand(size)*2-1
