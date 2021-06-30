@@ -56,10 +56,10 @@ python visual_play.py
 
 ```sh
 cd project/pytorch-a2c-ppo-acktr-gail/
-python main.py --env-name "mario_puzzle-v0" --algo ppo --use-gae --lr 2.5e-4 --clip-param 0.1 --value-loss-coef 0.5 --num-processes 16 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.1 --save-dir "./trained_models/experiment99/" --recurrent-policy --log-dir "./logs/experiment99/" --num-env-steps 1000000 --experiment 7 --cuda-id 1 
+python main.py --env-name "mario_puzzle-v0" --algo ppo --use-gae --lr 2.5e-4 --clip-param 0.1 --value-loss-coef 0.5 --num-processes 16 --num-steps 128 --num-mini-batch 4 --log-interval 1 --use-linear-lr-decay --entropy-coef 0.1 --save-dir "./trained_models/experiment99/" --recurrent-policy --log-dir "./logs/experiment99/" --num-env-steps 1000000 --experiment 7
 ```
 
-Since each environment contains a GAN, a repairer and a tetst agent, multiple GPU (at least four) are needed to run these components. You can decrease the num-processes parameter.
+Since each environment contains a GAN, a repairer and a tetst agent, multiple GPU (four as default) are needed to run these components.  You can also use cpu by adding --no-cuda.
 
 ### Generate levels with pre-trained agent
 
