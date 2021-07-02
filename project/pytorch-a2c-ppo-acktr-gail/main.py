@@ -109,7 +109,7 @@ def main():
     rollouts.to(device)
 
     episode_rewards = deque(maxlen=10)
-    D_reward = deque(maxlen=10)
+    MD_reward = deque(maxlen=10)
     N_reward = deque(maxlen=10)
     P_reward = deque(maxlen=10)
     MD_sum = deque(maxlen=10)
@@ -139,7 +139,7 @@ def main():
             for info in infos:
                 if 'episode' in info.keys():
                     episode_rewards.append(info['episode']['r'])
-                    D_reward.append(info['rewD_sum'])
+                    MD_reward.append(info['rewMD_sum'])
                     N_reward.append(info['rewN_sum'])
                     P_reward.append(info['rewP_sum'])
                     MD_sum.append(info['MD_sum'])
@@ -198,14 +198,14 @@ def main():
         if j==0:
             with open(g_csv_file_name, 'a', newline='') as f:
                 csv_writer = csv.writer(f)
-                csv_writer.writerow(("timesteps", "reward", "rewD_sum", "rewN_sum", "rewP_sum", "MD_sum", "N_sum"))
+                csv_writer.writerow(("timesteps", "reward", "rewMD_sum", "rewN_sum", "rewP_sum", "MD_sum", "N_sum"))
         if j % args.log_interval == 0 and len(episode_rewards) > 1:
             total_num_steps = (j + 1) * args.num_processes * args.num_steps
             end = time.time()
             
             with open(g_csv_file_name, 'a', newline='') as f:
                 csv_writer = csv.writer(f)
-                csv_writer.writerow((total_num_steps, np.mean(episode_rewards), np.mean(D_reward), np.mean(N_reward), np.mean(P_reward), np.mean(MD_sum), np.mean(N_sum)))
+                csv_writer.writerow((total_num_steps, np.mean(episode_rewards), np.mean(MD_reward), np.mean(N_reward), np.mean(P_reward), np.mean(MD_sum), np.mean(N_sum)))
             print(
                 "Updates {}, num timesteps {}, FPS {} \n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n"
                 .format(j, total_num_steps,

@@ -1,4 +1,4 @@
-timesteps,reward,rewD_sum,rewN_sum,rewP_sum,MD_sum,N_sum
+timesteps,reward,rewMD_sum,rewN_sum,rewP_sum,MD_sum,N_sum
 2048,13.0795646,0,2.877328782,10.20223599,0,13.35432011
 timesteps,reward,rewD_sum,rewN_sum,rewP_sum,MD_sum,N_sum
 2048,16.2170427,0,3.403319507,12.81372323,0,16.89344809
