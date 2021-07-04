@@ -6,11 +6,14 @@ env = gym.make("mario_puzzle-v0")
 info = {"exp":3, "visuals":1} # use playability reward only
 env.setParameter(info)
 env.reset()
+sum = 0
 for i in range(10000):
-    ob, rew, done ,info = env.step(np.random.rand(32))
+    ob, rew, done ,info = env.step(np.clip(np.random.randn(32), -1, 1))
+    sum += rew
     if done:
         env.reset()
-        print("Game end. The sum of playablity reward equals", rew)
+        print("Game end. The sum of playablity reward equals", sum)
+        sum = 0
 #lv = readTextLevel("/home/cseadmin/sty/project2/Experiment/levels/exp7_online/21.txt")#readTextLevel("/home/cseadmin/sty/project2/Experiment/levels/exp1/5_0_100.txt")
 #p = env.agent.start_test(lv)
 #print(p)
