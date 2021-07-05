@@ -110,9 +110,9 @@ class MarioPuzzle(gym.Env):
                                        shape=(self.nz,), dtype='float32')
         self.observation_space = spaces.Box(-1.,
                                             1., shape=(self.nz,), dtype='float32')
-        self.MD_que = deque(maxlen=1000)
-        self.N_que = deque(maxlen=1000)
-        self.use_P, self.use_D, self.use_N = False, False, False
+        self.F_que = deque(maxlen=1000)
+        self.H_que = deque(maxlen=1000)
+        self.use_P, self.use_F, self.use_H = False, False, False
         self.pop = deque(maxlen=20)
         self.novel_k = 10
         self.initial_state = None
@@ -142,21 +142,27 @@ class MarioPuzzle(gym.Env):
         self.win_h, self.win_w = 14, 14
         self.sy, self.sx = 14, 7
         self.ny, self.nx = 0, 3
-        # set reward function (D:fun, N:history fun, P:playability) You can also design you own reward function.
-        if exp == 1:  # D
-            self.use_D, self.use_N, self.use_P = True, False, False
-        elif exp == 2:  # N
-            self.use_D, self.use_N, self.use_P = False, True, False
+        '''
+        set reward function
+        F: fun
+        H: historical deviation
+        P: playability
+        You can also design you own reward function
+        '''
+        if exp == 1:  # F
+            self.use_F, self.use_H, self.use_P = True, False, False
+        elif exp == 2:  # H
+            self.use_F, self.use_H, self.use_P = False, True, False
         elif exp == 3:  # P
-            self.use_D, self.use_N, self.use_P = False, False, True
-        elif exp == 4:  # DN
-            self.use_D, self.use_N, self.use_P = True, True, False
-        elif exp == 5:  # DP
-            self.use_D, self.use_N, self.use_P = True, False, True
-        elif exp == 6:  # NP
-            self.use_D, self.use_N, self.use_P = False, True, True
-        elif exp == 7:  # DNP
-            self.use_D, self.use_N, self.use_P = True, True, True
+            self.use_F, self.use_H, self.use_P = False, False, True
+        elif exp == 4:  # FH
+            self.use_F, self.use_H, self.use_P = True, True, False
+        elif exp == 5:  # FP
+            self.use_F, self.use_H, self.use_P = True, False, True
+        elif exp == 6:  # HP
+            self.use_F, self.use_H, self.use_P = False, True, True
+        elif exp == 7:  # FHP
+            self.use_F, self.use_H, self.use_P = True, True, True
 
         self.norm = (exp > 3)
         self.agent = AStarAgent(self.id, visuals)
@@ -190,10 +196,10 @@ class MarioPuzzle(gym.Env):
         recorder['sample'] = []  # the resample time for each segment
         recorder['time'] = []  # the time needed to generate each segment
         recorder['D'] = []  # diversity
-        recorder['N'] = []  # history fun (novelty)
-        recorder['MD'] = []  # fun (moderate diversity)
-        recorder['rew_MD'] = []  # reward for fun (normalized if needed)
-        recorder['rew_N'] = []  # reward for history fun (normalized if needed)
+        recorder['H'] = []  # historical deviation (novelty)
+        recorder['F'] = []  # fun (moderate diversity)
+        recorder['rew_F'] = []  # reward for fun (normalized if needed)
+        recorder['rew_H'] = []  # reward for historical deviation (normalized if needed)
         recorder['rew_P'] = []  # reward for playability
         self.start_time = time.time()
         self.lv = np.zeros(shape=(self.map_h, self.map_w), dtype=np.uint8)
@@ -253,32 +259,32 @@ class MarioPuzzle(gym.Env):
         # calculate the diversity
         kl_val = KLWithSlideWindow(
             self.lv, (0, now_x, self.win_h, self.win_w), self.sx, self.nx, self.sy, self.ny)
-        # calculate fun (MD)
-        if self.use_D:
+        # calculate fun 
+        if self.use_F:
             recorder['D'].append(kl_val)
-            recorder['MD'].append(self.kl_fn(kl_val))
-            rew_MD = self.add_then_norm(self.kl_fn(kl_val), self.MD_que)
-            recorder['rew_MD'].append(rew_MD)
-            reward += rew_MD
-        # calculate history fun (N)
-        if self.use_N:
+            recorder['F'].append(self.kl_fn(kl_val))
+            rew_F = self.add_then_norm(self.kl_fn(kl_val), self.F_que)
+            recorder['rew_F'].append(rew_F)
+            reward += rew_F
+        # calculate historical deviation
+        if self.use_H:
             piece_mp = lv2Map(self.lv[:, now_x: now_x + self.win_w])
             novelty = self.cal_novelty(piece_mp)
-            recorder['N'].append(novelty)
-            rew_N = self.add_then_norm(novelty, self.N_que)
-            recorder['rew_N'].append(rew_N)
-            reward += rew_N
+            recorder['H'].append(novelty)
+            rew_H = self.add_then_norm(novelty, self.H_que)
+            recorder['rew_H'].append(rew_H)
+            reward += rew_H
             self.pop.append(piece_mp)
         self.cnt += 1
         if self.cnt >= self.tot:
             done = True
         info = {}
         if done:
-            info['rewMD_sum'] = sum(recorder['rew_MD'])
-            info['rewN_sum'] = sum(recorder['rew_N'])
+            info['rewF_sum'] = sum(recorder['rew_F'])
+            info['rewH_sum'] = sum(recorder['rew_H'])
             info['rewP_sum'] = sum(recorder['rew_P'])
-            info['MD_sum'] = sum(recorder['MD'])
-            info['N_sum'] = sum(recorder['N'])
+            info['F_sum'] = sum(recorder['F'])
+            info['H_sum'] = sum(recorder['H'])
             info['ep_len'] = self.cnt
             self.recorder['lv'] = self.lv[:, 0:now_x+self.win_w]
             self.recorder['unrepair_lv'] = self.unrepair_lv[:,
