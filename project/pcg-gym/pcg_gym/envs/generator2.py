@@ -1,4 +1,4 @@
-import pcg_gym.envs.models.dcgan as dcgan
+from pcg_gym.envs.models.dcgan import DCGAN_G
 import torch
 from torch.autograd import Variable
 import numpy
@@ -18,7 +18,7 @@ class Generator():
         self.nz = nz = 32
         self.h = h
         self.w = w
-        self.generator = dcgan.DCGAN_G(imageSize, nz, z_dims, ngf, ngpu, n_extra_layers)
+        self.generator = DCGAN_G(imageSize, nz, z_dims, ngf, ngpu, n_extra_layers)
         self.gpu = gpu
         if gpu:
             self.generator.load_state_dict(torch.load(path))

@@ -5,13 +5,11 @@ import torch.nn.functional as F
 import copy
 from pcg_gym.envs.MarioLevelRepairer.utils.visualization import *
 from pcg_gym.envs.MarioLevelRepairer.CNet.model import CNet
-import pcg_gym.envs.MarioLevelRepairer.utils.level_process
+from pcg_gym.envs.MarioLevelRepairer.utils.level_process import type_num
+from pcg_gym.envs.MarioLevelRepairer.utils.level_process import empty
 import copy
 from torch.autograd import Variable
-import pcg_gym.envs.MarioLevelRepairer.utils as utils
 import numpy as np
-type_num = utils.level_process.type_num
-empty = utils.level_process.empty
 # parameter
 Threshold = 0.05
 P_M0 = 0.8

@@ -7,7 +7,6 @@ import sys
 import time
 import gym
 from gym import spaces
-import pcg_gym.envs.models.dcgan as dcgan
 from pcg_gym.envs.MarioLevelRepairer.CNet.model import CNet
 import torch
 import json

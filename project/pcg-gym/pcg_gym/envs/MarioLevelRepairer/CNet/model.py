@@ -6,10 +6,12 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 import numpy as np
 import json
-import pcg_gym.envs.MarioLevelRepairer.utils.level_process
-import pcg_gym.envs.MarioLevelRepairer.utils as utils
-type_num = utils.level_process.type_num
-empty = utils.level_process.empty
+from pcg_gym.envs.MarioLevelRepairer.utils.level_process import type_num
+from pcg_gym.envs.MarioLevelRepairer.utils.level_process import empty
+#import pcg_gym.envs.MarioLevelRepairer.utils.level_process
+#import pcg_gym.envs.MarioLevelRepairer.utils as utils
+#type_num = utils.level_process.type_num
+#empty = utils.level_process.empty
 class CNet(torch.nn.Module):
     def __init__(self, n_feature, n_hidden, n_hidden2, n_output):
         super(CNet, self).__init__()
